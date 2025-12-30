@@ -10,7 +10,6 @@ resource "google_storage_bucket" "website" {
 
   website {
     main_page_suffix = "index.html"
-    not_found_page   = "error.html"
   }
 }
 
