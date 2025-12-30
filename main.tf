@@ -18,9 +18,3 @@ resource "google_storage_bucket_iam_member" "public_access" {
   role   = "roles/storage.objectViewer"
   member = "allUsers"
 }
-terraform {
-  backend "gcs" {
-    bucket  = "cv-project-dpr-30122025v2" # El nombre del bucket que acabas de crear
-    prefix  = "terraform/state"
-  }
-}
