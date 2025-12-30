@@ -7,7 +7,7 @@ on:
 # Definimos variables globales para este flujo
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  BUCKET_NAME: "cv-project-dpr-30122025v2" # <--- Cambia esto aquí fácilmente
+  BUCKET_NAME: "cv-project-dpr-30122025v2" 
   REGION: "us-central1"
 
 jobs:
