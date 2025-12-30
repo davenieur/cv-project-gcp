@@ -7,7 +7,7 @@ on:
 # Definimos variables globales para este flujo
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  BUCKET_NAME: "cv-project-dpr-30122025" # <--- Cambia esto aquí fácilmente
+  BUCKET_NAME: "cv-project-dpr-30122025v2" # <--- Cambia esto aquí fácilmente
   REGION: "us-central1"
 
 jobs:
@@ -36,3 +36,7 @@ jobs:
           -var="bucket_name=${{ env.BUCKET_NAME }}" \
           -var="region=${{ env.REGION }}" \
           -auto-approve
+
+    - name: Upload HTML to Bucket
+      run: |
+        gsutil cp index.html gs://${{ env.BUCKET_NAME }}/
