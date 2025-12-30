@@ -22,7 +22,7 @@ resource "google_storage_bucket_iam_member" "public_access" {
 
 terraform {
   backend "gcs" {
-    bucket  = var.bucket_name # El nombre del bucket que acabas de crear
+    bucket  = "cv-project-dpr-30122025v2" # El nombre del bucket que acabas de crear
     prefix  = "terraform/state"
   }
 }
