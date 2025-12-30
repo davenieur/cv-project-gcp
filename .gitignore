@@ -1,0 +1,12 @@
+# Archivos de estado de Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Variables sensibles (donde pusiste tu Project ID)
+*.tfvars
+*.tfvars.json
+
+# Archivos de log y otros
+.terraform.lock.hcl
+crash.log
